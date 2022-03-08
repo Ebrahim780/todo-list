@@ -9,9 +9,11 @@ const Form = () => {
 
   const submitHandler = (event) => {
     event.preventDefault()
+    if (priority !== '')
     dispatch({
       type: 'ADD_TODO', content: currentToDo, priority
     })
+
     setCurrentToDo('')
   }
 
@@ -33,7 +35,7 @@ const Form = () => {
       <div className='form__priority'>
         <select className="browser-default form__select" defaultValue='' tabIndex={2}
           onChange={(event) => setPrtiority(event.target.value)}>
-          <option value='' disabled>{farsi ? 'سطح اولویت را تعیین کنید' : 'Set the priority level'}</option>
+          <option value='' disabled>{farsi ? 'سطح اولویت را تعیین کن' : 'Set the priority level'}</option>
           <option value="low">{farsi ? 'کم' : 'Low'}</option>
           <option value="medium">{farsi ? 'متوسط' : 'Medium'}</option>
           <option value="high">{farsi ? 'زیاد' : 'High'}</option>

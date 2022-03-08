@@ -9,7 +9,7 @@ const HighPriority = () => {
   return (
     <div className='col s12 m6 l4'>
       {todos.length ?
-        <div className="list card-panel red">
+        <div className='list card-panel red'>
           <h5 className='list__header'>{farsi ? 'باید انجام بشه' : 'Have to done'}</h5>
           {todos.filter(todo => todo.priority === 'high').map(todo => {
               return (
@@ -24,7 +24,7 @@ const HighPriority = () => {
                   </span>
                   <Tooltip content={farsi ? 'ویرایش' : 'edit'}>
                     <i
-                      className="material-icons list__button"
+                      className='material-icons list__button'
                       onClick={() => dispatch({ type: 'UPDATE_TODO', content: currentContent, id: todo.id })}>edit</i>
                   </Tooltip>
                   <Tooltip content={farsi ? 'حذف' : 'delete'}>

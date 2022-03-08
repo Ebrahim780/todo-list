@@ -5,7 +5,7 @@ html {
 @font-face {
   font-family: Vazir;
   src: url('../assets/font/Vazir.woff') format('woff'),
-  url('../assets/font/Vazir.ttf') format('truetype')
+    url('../assets/font/Vazir.ttf') format('truetype')
 }
 
 * {
@@ -25,4 +25,109 @@ button {
 
 button:active {
   transform: scale(0.9);
+}
+
+/* Title */
+.title {
+  margin: 1.5rem 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.title__button {
+  color: #fff;
+}
+
+.title__header {
+  color: gray;
+}
+
+.title__content {
+  margin-top: 2rem;
+}
+
+/* Form */
+.form__container {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.form__input {
+  text-align: center;
+  width: 50% !important;
+  border-radius: 50rem !important;
+  background-color: white !important;
+}
+
+.form__button {
+  margin: 0 10px;
+}
+
+.form__priority {
+  width: 30%;
+  margin: 1rem auto;
+}
+
+.form__select {
+  border-radius: 7px;
+}
+
+.form__select,
+.form__input {
+  font-family: Vazir, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+}
+
+@media screen and (max-width: 768px) {
+  .form__input {
+    width: 80% !important;
+  }
+
+  .form__priority {
+    width: 50%;
+  }
+}
+
+/* List */
+.list {
+  color: #fff;
+}
+
+.list__container {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-evenly;
+  margin-bottom: 10px;
+}
+
+.list__header {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+.list__item {
+  max-width: 80%;
+  width: 70%;
+  padding: 2px;
+  overflow: hidden;
+  border-radius: 5px;
+  border-bottom: 1px solid;
+  outline: none;
+}
+
+.list__button {
+  cursor: pointer;
+  transition: .3s;
+}
+
+.list__button:active {
+  transform: scale(.9);
+}
+
+.done {
+  text-decoration: line-through;
+}
+
+.card-panel {
+  padding: 5px !important;
 }

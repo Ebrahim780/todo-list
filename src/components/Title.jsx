@@ -1,6 +1,5 @@
 import React, { useContext } from 'react';
 import { ToDoContext } from '../contexts/ToDo';
-import '../styles/title.css';
 
 const Title = () => {
   const { todos, farsi, dispatch } = useContext(ToDoContext);

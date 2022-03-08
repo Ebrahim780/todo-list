@@ -2,7 +2,6 @@ import React, { useContext, useEffect, useState } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import { ToDoContext } from '../contexts/ToDo';
 import 'react-toastify/dist/ReactToastify.css';
-import '../styles/form.css';
 
 const Form = () => {
   const [currentToDo, setCurrentToDo] = useState('');
@@ -47,7 +46,6 @@ const Form = () => {
         </select>
       </div>
       <ToastContainer position={farsi ? 'top-left' : 'top-right'} rtl={farsi ? true : false} />
-
     </form>
   )
 }

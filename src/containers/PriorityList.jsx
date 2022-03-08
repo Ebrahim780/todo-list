@@ -2,7 +2,6 @@ import React from 'react';
 import HighPriority from '../components/HighPriority';
 import MediumPriority from '../components/MediumPriority';
 import LowPriority from '../components/LowPriority';
-import '../styles/list.css';
 
 const PriorityList = () => {
   const style = {

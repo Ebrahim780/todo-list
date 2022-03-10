@@ -13,7 +13,7 @@ const Form = () => {
 
     if (priority !== '')
       dispatch({
-        type: 'ADD_TODO', content: currentToDo, priority
+        type: 'ADD_TODO', content: currentToDo.trim(), priority
       })
     else
       toast.warn(farsi ? 'لطفا اولویت را تعیین کنید' : 'Please set the Priority')

@@ -3,7 +3,7 @@ import { todoReducer } from '../reducers';
 
 export const ToDoContext = createContext();
 
-const ToDo = (props) => {
+const ToDoProvider = (props) => {
 
   const [state, dispatch] = useReducer(todoReducer, {
     todos: [],
@@ -26,4 +26,4 @@ const ToDo = (props) => {
   )
 }
 
-export default ToDo;
+export default ToDoProvider;

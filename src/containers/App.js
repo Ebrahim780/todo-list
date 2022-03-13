@@ -1,16 +1,16 @@
 import React from 'react';
-import Form from '../components/Form';
 import Title from '../components/Title';
-import ToDo from '../contexts/ToDo';
-import PriorityList from './PriorityList';
+import Form from '../components/Form';
+import List from '../components/List';
+import ToDoProvider from '../contexts/ToDoProvider';
 
 const App = () => {
   return (
-    <ToDo>
-        <Title />
-        <Form />
-        <PriorityList/>
-    </ToDo>
+    <ToDoProvider>
+      <Title />
+      <Form />
+      <List />
+    </ToDoProvider>
   )
 }
 

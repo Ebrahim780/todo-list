@@ -4,9 +4,9 @@ import App from './containers/App';
 import './styles/index.css';
 import './styles/materialize.min.css';
 
-reactDom.render (
-  <React.Fragment>
-    <App/>
-  </React.Fragment>,
+reactDom.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
   document.getElementById('root')
 )

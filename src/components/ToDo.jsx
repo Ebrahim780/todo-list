@@ -2,7 +2,7 @@ import React, { useContext, useState } from 'react';
 import { ToDoContext } from '../contexts/ToDoProvider';
 import Tooltip from './ToolTip';
 
-const ToDo = ({priority}) => {
+const ToDo = ({ priority }) => {
   const [currentContent, setCurrentContent] = useState('')
   const { todos, farsi, dispatch } = useContext(ToDoContext)
 

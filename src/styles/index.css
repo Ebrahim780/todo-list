@@ -1,7 +1,3 @@
-html {
-  box-sizing: border-box;
-}
-
 @font-face {
   font-family: Vazir;
   src: url('../assets/font/Vazir.woff') format('woff'),
@@ -31,6 +27,20 @@ button {
 
 button:active {
   transform: scale(0.9);
+}
+
+/* Loading */
+.loading {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.loading__logo {
+  width: 96px;
+  margin-bottom: 15px;
 }
 
 /* Title */

@@ -8,12 +8,14 @@ export const todoReducer = (state, action) => {
   switch (action.type) {
     case 'ADD_TODO':
       return {
-        ...state, todos: [...state.todos, {
-          content: action.content,
-          priority: action.priority,
-          done: false,
-          id: uuid()
-        }]
+        ...state, todos: [
+          ...state.todos, {
+            content: action.content,
+            priority: action.priority,
+            done: false,
+            id: uuid()
+          }
+        ]
       }
 
     case 'UPDATE_TODO':

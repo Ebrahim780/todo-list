@@ -8,6 +8,10 @@
   font-family: Vazir, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+html {
+  user-select: none;
+}
+
 body {
   text-align: center;
   background-color: #e9ecef;

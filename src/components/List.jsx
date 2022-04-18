@@ -1,13 +1,14 @@
 import React, { useContext } from 'react';
 import ToDo from './ToDo';
 import { ToDoContext } from '../contexts/ToDoProvider';
+import empty from '../assets/image/empty.png';
 
 const List = () => {
   const { todos, farsi } = useContext(ToDoContext)
 
-  return [
-    todos.length ?
-      <div className='row list' key={1}>
+  return <>
+    {todos.length ?
+      <div className='row list'>
         <div className='col s12 m6 l4'>
           <div className='card-panel green'>
             <h5 className='list__header'>{farsi ? 'مهم نیست انجام بشه' : 'No Matter to done'}</h5>
@@ -27,7 +28,11 @@ const List = () => {
           </div>
         </div>
       </div>
-      : null]
+      :
+      <div className='row list'>
+        <img src={empty} alt="nothing to do" className='list__image--empty' />
+      </div>
+    }</>
 }
 
 export default List;

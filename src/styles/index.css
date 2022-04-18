@@ -147,14 +147,26 @@ button:active {
   transition: .3s;
 }
 
+.list__image--empty {
+  margin: 0 auto;
+  width: 400px;
+}
+
+@media screen and (max-width: 320px)  {
+  .list__image--empty {
+    width: 260px;
+  }
+}
+
 .list__button:active {
   transform: scale(.9);
 }
 
-.done {
-  text-decoration: line-through;
-}
-
+/* none-scope */
 .card-panel {
   padding: 5px !important;
+}
+
+.done {
+  text-decoration: line-through;
 }

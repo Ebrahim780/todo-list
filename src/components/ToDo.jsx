@@ -1,6 +1,11 @@
 import React, { useContext, useState } from 'react';
 import { ToDoContext } from '../contexts/ToDoProvider';
 import Tooltip from './ToolTip';
+import pin from '../assets/icon/pin.png';
+import edit from '../assets/icon/edit.png';
+import remove from '../assets/icon/remove.png';
+import checked from '../assets/icon/checked.png';
+import unchecked from '../assets/icon/unchecked.png';
 
 const ToDo = ({ priority }) => {
   const [currentContent, setCurrentContent] = useState('')
@@ -18,22 +23,32 @@ const ToDo = ({ priority }) => {
           {todo.content}
         </span>
         <Tooltip content={farsi ? 'ویرایش' : 'edit'}>
-          <i
-            className='material-icons list__button'
+          <img
+            className='list__button'
             onClick={() => dispatch({ type: 'UPDATE_TODO', content: currentContent.replace('&nbsp;', ''), id: todo.id })}
-          >edit</i>
+            src={edit}
+          />
         </Tooltip>
         <Tooltip content={farsi ? 'حذف' : 'delete'}>
-          <i
-            className='material-icons list__button'
-            onClick={() => dispatch({ type: 'REMOVE_TODO', id: todo.id })}>delete</i>
+          <img
+            className='list__button'
+            onClick={() => dispatch({ type: 'REMOVE_TODO', id: todo.id })}
+            src={remove}
+          />
         </Tooltip>
         <Tooltip content={farsi ? 'انجام شد' : 'done'}>
-          <i
-            className='material-icons list__button'
-            onClick={() => dispatch({ type: 'DONE_TODO', id: todo.id })}>
-            {todo.done ? 'check_box' : 'check_box_outline_blank'}
-          </i>
+          <img
+            className='list__button'
+            onClick={() => dispatch({ type: 'DONE_TODO', id: todo.id })}
+            src={todo.done ? checked : unchecked}
+          />
+        </Tooltip>
+        <Tooltip content={farsi ? 'چسباندن' : 'pin'}>
+          <img
+            className='list__button'
+            onClick={() => dispatch({ type: 'PIN_TODO', id: todo.id })}
+            src={pin}
+          />
         </Tooltip>
       </div>
     )]

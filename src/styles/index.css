@@ -145,6 +145,8 @@ button:active {
 
 .list__button {
   transition: .3s;
+  width: 90%;
+  filter: invert(1);
 }
 
 .list__image--empty {

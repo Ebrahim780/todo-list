@@ -16,7 +16,7 @@ const Form = () => {
         type: 'ADD_TODO', content: currentToDo.trim(), priority
       })
     else
-      toast.warn(farsi ? 'لطفا اولویت را تعیین کنید' : 'Please set the Priority')
+      toast.warn(farsi ? 'لطفا سطح اولویت را تعیین کنید' : 'Please set the Priority')
 
     setCurrentToDo('')
   }

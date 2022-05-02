@@ -4,9 +4,9 @@ import { ToDoContext } from '../contexts/ToDoProvider';
 import 'react-toastify/dist/ReactToastify.css';
 
 const Form = () => {
-  const [currentToDo, setCurrentToDo] = useState('');
-  const [priority, setPrtiority] = useState('');
-  const { todos, farsi, dispatch } = useContext(ToDoContext);
+  const [currentToDo, setCurrentToDo] = useState('')
+  const [priority, setPrtiority] = useState('')
+  const { todos, farsi, dispatch } = useContext(ToDoContext)
 
   const submitHandler = (event) => {
     event.preventDefault()
@@ -32,8 +32,8 @@ const Form = () => {
           type='text' required className='form__input' tabIndex={1}
           value={currentToDo} onChange={(event) => setCurrentToDo(event.target.value)}
           placeholder={farsi ? 'چه کاری می خوای انجام بدی؟' : 'What do you want to do?'} />
-        <button type='submit' className='form__button btn-floating orange' tabIndex={3}>
-          <i className='material-icons'>add</i>
+        <button type='submit' className='form__button add btn-floating orange' tabIndex={3}>
+          +
         </button>
       </div>
       <div className='form__priority'>

@@ -7,10 +7,11 @@ const ToDoProvider = (props) => {
 
   const [state, dispatch] = useReducer(todoReducer, {
     todos: [],
+    pinned: {},
     farsi: true
   }, () => {
     const data = localStorage.getItem('state');
-    return data ? JSON.parse(data) : { todos: [], farsi: true }
+    return data ? JSON.parse(data) : { todos: [], pinned: {}, farsi: true }
   })
 
   useEffect(() => {

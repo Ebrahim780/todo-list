@@ -3,18 +3,18 @@ import '../styles/tooltip.css';
 
 const Tooltip = (props) => {
   let timeout;
-  const [active, setActive] = useState(false);
+  const [active, setActive] = useState(false)
 
   const showTip = () => {
     timeout = setTimeout(() => {
-      setActive(true);
-    }, props.delay || 250);
-  };
+      setActive(true)
+    }, props.delay || 250)
+  }
 
   const hideTip = () => {
-    clearInterval(timeout);
-    setActive(false);
-  };
+    clearInterval(timeout)
+    setActive(false)
+  }
 
   return (
     <div className='Tooltip-Wrapper' onMouseEnter={showTip} onMouseLeave={hideTip}>

@@ -19,7 +19,8 @@ body {
 
 button,
 select,
-.list__button {
+.list__button,
+.pinned__button {
   cursor: pointer;
 }
 
@@ -32,6 +33,7 @@ button {
 button:active {
   transform: scale(0.9);
 }
+
 
 /* Loading */
 .loading {
@@ -46,6 +48,7 @@ button:active {
   width: 96px;
   margin-bottom: 15px;
 }
+
 
 /* Title */
 .title {
@@ -71,6 +74,7 @@ button:active {
   margin-top: 2rem;
 }
 
+
 /* Form */
 .form__container {
   display: flex;
@@ -87,6 +91,11 @@ button:active {
 
 .form__button {
   margin: 0 10px;
+}
+
+.add {
+  font-size: 32px !important;
+  padding-top: 2px !important;
 }
 
 .form__priority {
@@ -113,6 +122,7 @@ button:active {
   }
 }
 
+
 /* List */
 .list {
   display: flex;
@@ -125,7 +135,7 @@ button:active {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 .list__header {
@@ -134,9 +144,7 @@ button:active {
 }
 
 .list__item {
-  max-width: 80%;
   width: 70%;
-  padding: 2px;
   overflow: hidden;
   border-radius: 5px;
   border-bottom: 1px solid;
@@ -145,7 +153,8 @@ button:active {
 
 .list__button {
   transition: .3s;
-  width: 90%;
+  width: 100%;
+  margin-top: 5px;
   filter: invert(1);
 }
 
@@ -154,15 +163,54 @@ button:active {
   width: 400px;
 }
 
-@media screen and (max-width: 320px)  {
+@media screen and (max-width: 320px) {
   .list__image--empty {
     width: 260px;
   }
 }
 
-.list__button:active {
+.list__button:active,
+.pinned__button:active {
   transform: scale(.9);
 }
+
+
+/* Pinned */
+.pinned {
+  color: #fff;
+  top: 0;
+  z-index: 100;
+  max-width: 200px;
+}
+
+.pinned__wrapper {
+  display: flex;
+  justify-content: end;
+}
+
+.pinned__container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px !important;
+}
+
+.pinned__header {
+  margin-bottom: 20px;
+}
+
+.pinned__button {
+  filter: invert(1);
+  transition: .2s;
+  height: 20px;
+}
+
+.pinned__content {
+  overflow: hidden;
+  max-width: 80%;
+}
+
 
 /* none-scope */
 .card-panel {

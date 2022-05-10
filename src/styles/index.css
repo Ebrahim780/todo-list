@@ -194,7 +194,7 @@ button:active {
 
 .pinned__wrapper {
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
 }
 
 .pinned__container {

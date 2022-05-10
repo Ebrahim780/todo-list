@@ -14,6 +14,7 @@ const Pinned = () => {
             <span className='pinned__content' >{pinned.content}</span>
             <ToolTip content={farsi ? 'برداشتن' : 'Unpin'}>
               <img src={unpin} className='pinned__button'
+                alt='pin'
                 onClick={() => dispatch({ type: 'UNPIN_TODO', id: pinned.id })} />
             </ToolTip>
           </div>

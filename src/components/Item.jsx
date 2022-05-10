@@ -19,6 +19,7 @@ const Item = ({ priority }) => {
             className='list__button'
             onClick={() => dispatch({ type: 'REMOVE_TODO', id: todo.id })}
             src={remove}
+            alt='delete'
           />
         </Tooltip>
         <Tooltip content={farsi ? 'انجام شد' : 'done'}>
@@ -26,6 +27,7 @@ const Item = ({ priority }) => {
             className='list__button'
             onClick={() => dispatch({ type: 'DONE_TODO', id: todo.id })}
             src={todo.done ? checked : unchecked}
+            alt='done'
           />
         </Tooltip>
         <Tooltip content={farsi ? 'چسباندن' : 'pin'}>
@@ -33,6 +35,7 @@ const Item = ({ priority }) => {
             className='list__button'
             onClick={() => dispatch({ type: 'PIN_TODO', id: todo.id })}
             src={pin}
+            alt='pin'
           />
         </Tooltip>
       </div>

@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import ToDo from './ToDo';
+import Item from './Item';
 import { ToDoContext } from '../contexts/ToDoProvider';
 import empty from '../assets/image/empty.png';
 
@@ -12,19 +12,19 @@ const List = () => {
         <div className='col s12 m6 l4'>
           <div className='card-panel green'>
             <h5 className='list__header'>{farsi ? 'مهم نیست انجام بشه' : 'No Matter to done'}</h5>
-            <ToDo priority='low' />
+            <Item priority='low' />
           </div>
         </div>
         <div className='col s12 m6 l4'>
           <div className='card-panel orange'>
             <h5 className='list__header'>{farsi ? 'بهتره انجام بشه' : 'Better to done'}</h5>
-            <ToDo priority='medium' />
+            <Item priority='medium' />
           </div>
         </div>
         <div className='col s12 m6 l4'>
           <div className='card-panel red'>
             <h5 className='list__header'>{farsi ? 'باید انجام بشه' : 'Have to done'}</h5>
-            <ToDo priority='high' />
+            <Item priority='high' />
           </div>
         </div>
       </div>
@@ -32,7 +32,8 @@ const List = () => {
       <div className='row list'>
         <img src={empty} alt="nothing to do" className='list__image--empty' />
       </div>
-    }</>
+    }
+    </>
 }
 
 export default List;

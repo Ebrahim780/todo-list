@@ -144,11 +144,12 @@ button:active {
 }
 
 .list__item {
-  width: 70%;
-  overflow: hidden;
-  border-radius: 5px;
-  border-bottom: 1px solid;
-  outline: none;
+  width: 70% !important;
+  overflow: hidden !important;
+  color: #fff;
+  padding-right: 5px !important;
+  outline: none !important;
+  border: none !important;
 }
 
 .list__button {

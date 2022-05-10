@@ -12,7 +12,7 @@ const Item = ({ priority }) => {
 
   return [
     todos.filter(todo => todo.priority === priority).map(todo =>
-      <div className='list__container' key={todo.id}>
+      <div className='list__item' key={todo.id}>
         <ToDo todo={todo} />
         <Tooltip content={farsi ? 'حذف' : 'delete'}>
           <img

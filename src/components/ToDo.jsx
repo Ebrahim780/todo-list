@@ -8,7 +8,7 @@ const ToDo = (props) => {
   return (
     <input type='text'
       value={content}
-      className='list__item'
+      className='list__item__input'
       onChange={event => dispatch({ type: 'UPDATE_TODO', content: event.target.value, id })}
     />
   )

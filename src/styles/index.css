@@ -5,7 +5,7 @@
 }
 
 * {
-  font-family: Vazir, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: Vazir, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
 }
 
 html {
@@ -131,31 +131,39 @@ button:active {
   color: #fff;
 }
 
-.list__container {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  margin-bottom: 20px;
-}
-
 .list__header {
   margin-top: 1rem;
   margin-bottom: 2rem;
 }
 
 .list__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-bottom: 10px;
+  background-color: rgba(0, 0, 0, 0.15);
+  border-radius: 3px;
+  padding: 0 5px;
+}
+
+.list__item__input {
   width: 70% !important;
   overflow: hidden !important;
-  color: #fff;
-  padding-right: 5px !important;
+  padding: 0 5px !important;
+  margin: 0 5px !important;
   outline: none !important;
+  border-bottom: none !important;
+  color: #fff;
+}
+
+.list__item__input:focus {
   border: none !important;
+  box-shadow: none !important;
 }
 
 .list__button {
   transition: .3s;
   width: 100%;
-  margin-top: 5px;
   filter: invert(1);
 }
 
@@ -179,9 +187,9 @@ button:active {
 /* Pinned */
 .pinned {
   color: #fff;
-  top: 0;
+  top: 15px;
   z-index: 100;
-  max-width: 200px;
+  width: 200px;
 }
 
 .pinned__wrapper {
@@ -190,15 +198,13 @@ button:active {
 }
 
 .pinned__container {
+  padding: 10px;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  padding: 0 10px !important;
-}
-
-.pinned__header {
-  margin-bottom: 20px;
+  border-radius: 3px;
+  background: rgba(0, 0, 0, 0.1);
 }
 
 .pinned__button {

@@ -33,7 +33,7 @@ const List = () => {
         <img src={empty} alt="nothing to do" className='list__image--empty' />
       </div>
     }
-    </>
+  </>
 }
 
 export default List;

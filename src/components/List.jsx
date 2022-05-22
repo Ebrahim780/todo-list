@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
-import Item from './Item';
 import { ToDoContext } from '../contexts/ToDoProvider';
 import empty from '../assets/image/empty.png';
+import Item from './Item';
 
 const List = () => {
   const { todos, farsi } = useContext(ToDoContext)

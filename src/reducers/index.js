@@ -1,7 +1,7 @@
 import { v4 as uuid } from 'uuid';
 
 export const todoReducer = (state, action) => {
-  const copy = [...state.todos];
+  const copy = [...state.todos]
   const todoIndex = copy.findIndex(todo => todo.id === action.id)
   const todoRemain = copy.filter(todo => todo.id !== action.id)
   const todoFind = copy.find(todo => todo.id === action.id)
@@ -20,8 +20,8 @@ export const todoReducer = (state, action) => {
       }
 
     case 'UPDATE_TODO':
-      const todo = copy[todoIndex];
-      todo.content = action.content;
+      const todo = copy[todoIndex]
+      todo.content = action.content
       return {
         ...state, todos: copy
       }

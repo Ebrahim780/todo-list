@@ -2,7 +2,6 @@ import React from 'react';
 import logo from '../assets/icon/logo.png';
 
 const Loading = () => {
-
   return (
     <div className='loading'>
       <img src={logo} alt="logo" className='loading__logo' />
@@ -18,7 +17,7 @@ const Loading = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
 export default Loading;

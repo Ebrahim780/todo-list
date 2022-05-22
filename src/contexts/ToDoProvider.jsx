@@ -4,7 +4,6 @@ import { todoReducer } from '../reducers';
 export const ToDoContext = createContext();
 
 const ToDoProvider = (props) => {
-
   const [state, dispatch] = useReducer(todoReducer, {
     todos: [],
     pinned: {},

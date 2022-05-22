@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import '../styles/tooltip.css';
 
 const Tooltip = (props) => {
-  let timeout;
+  let timeout
   const [active, setActive] = useState(false)
 
   const showTip = () => {
@@ -25,7 +25,7 @@ const Tooltip = (props) => {
         </div>
       )}
     </div>
-  );
-};
+  )
+}
 
 export default Tooltip;

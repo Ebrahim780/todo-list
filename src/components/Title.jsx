@@ -4,7 +4,7 @@ import EN from '../assets/icon/en.png';
 import FA from '../assets/icon/fa.png';
 
 const Title = () => {
-  const { todos, farsi, dispatch } = useContext(ToDoContext);
+  const { todos, farsi, dispatch } = useContext(ToDoContext)
 
   return (
     <div className='title'>
@@ -28,7 +28,7 @@ const Title = () => {
       }
       <div></div>
     </div>
-  );
-};
+  )
+}
 
 export default Title;

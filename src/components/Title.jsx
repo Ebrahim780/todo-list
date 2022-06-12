@@ -1,10 +1,15 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { ToDoContext } from '../contexts/ToDoProvider';
 import EN from '../assets/icon/en.png';
 import FA from '../assets/icon/fa.png';
+import SearchIcon from '../assets/icon/search.png'
+import Find from './Find';
 
 const Title = () => {
   const { todos, farsi, dispatch } = useContext(ToDoContext)
+  const [findMode, setFindMode] = useState(false)
+
+  const changeSearch = () => setFindMode(!findMode)
 
   return (
     <div className='title'>
@@ -26,7 +31,14 @@ const Title = () => {
           </p>
         </div>
       }
-      <div></div>
+      {
+        findMode ?
+          <Find isSerach={changeSearch} />
+          :
+          <button className='btn btn-floating title__search' onClick={changeSearch}>
+            <img src={SearchIcon} alt='Find Todo' className='title__search__icon' />
+          </button>
+      }
     </div>
   )
 }

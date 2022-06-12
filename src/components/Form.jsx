@@ -21,10 +21,6 @@ const Form = () => {
     setCurrentToDo('')
   }
 
-  useEffect(() => {
-    console.log('todos: ', todos)
-  }, [todos])
-
   return (
     <form className='form' onSubmit={submitHandler}>
       <div className='form__container'>

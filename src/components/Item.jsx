@@ -1,11 +1,12 @@
 import React, { useContext } from 'react';
 import { ToDoContext } from '../contexts/ToDoProvider';
+import ToDo from './ToDo';
 import Tooltip from './ToolTip';
+import ImageButton from './ImageButton';
 import pin from '../assets/icon/pin.png';
 import remove from '../assets/icon/remove.png';
 import checked from '../assets/icon/checked.png';
 import unchecked from '../assets/icon/unchecked.png';
-import ToDo from './ToDo';
 
 const Item = ({ priority }) => {
   const { todos, farsi, dispatch } = useContext(ToDoContext)
@@ -15,28 +16,22 @@ const Item = ({ priority }) => {
       <div className='list__item' key={todo.id}>
         <ToDo todo={todo} />
         <Tooltip content={farsi ? 'حذف' : 'delete'}>
-          <img
-            className='list__button'
-            onClick={() => dispatch({ type: 'REMOVE_TODO', id: todo.id })}
-            src={remove}
-            alt='delete'
-          />
+          <ImageButton
+            clicked={() => dispatch({ type: 'REMOVE_TODO', id: todo.id })}
+            url={remove}
+            alt='delete' />
         </Tooltip>
         <Tooltip content={farsi ? 'انجام شد' : 'done'}>
-          <img
-            className='list__button'
-            onClick={() => dispatch({ type: 'DONE_TODO', id: todo.id })}
-            src={todo.done ? checked : unchecked}
-            alt='done'
-          />
+          <ImageButton
+            clicked={() => dispatch({ type: 'DONE_TODO', id: todo.id })}
+            url={todo.done ? checked : unchecked}
+            alt='done' />
         </Tooltip>
         <Tooltip content={farsi ? 'چسباندن' : 'pin'}>
-          <img
-            className='list__button'
-            onClick={() => dispatch({ type: 'PIN_TODO', id: todo.id })}
-            src={pin}
-            alt='pin'
-          />
+          <ImageButton
+            clicked={() => dispatch({ type: 'PIN_TODO', id: todo.id })}
+            url={pin}
+            alt='pin' />
         </Tooltip>
       </div>
     )]

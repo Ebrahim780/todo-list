@@ -29,8 +29,11 @@ const List = () => {
         </div>
       </div>
       :
-      <div className='row list'>
+      <div className='row'>
         <img src={empty} alt="nothing to do" className='list__image--empty' />
+        <p className='list__content'>
+          {farsi ? `شما کاری برای انجام ندارید :)` : `You don't have any work to do :)`}
+        </p>
       </div>
     }
   </>

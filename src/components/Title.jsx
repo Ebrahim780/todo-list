@@ -17,19 +17,9 @@ const Title = () => {
         <img className='title__icon--lang' src={farsi ? EN : FA} alt="language" />
       </button>
       {farsi ?
-        <div>
-          <h4 className='title__header'>فهرست کارهای من</h4>
-          <p className='title__content'>
-            {todos.length ? `شما ${todos.length} کار برای انجام دارید` : `شما کاری برای انجام ندارید :)`}
-          </p>
-        </div>
+        <h4 className='title__header'>فهرست کارهای من</h4>
         :
-        <div>
-          <h4 className='title__header'>My To Do List</h4>
-          <p className='title__content'>
-            {todos.length ? `You have ${todos.length} works to do` : `You don't have any work to do :)`}
-          </p>
-        </div>
+        <h4 className='title__header'>My To Do List</h4>
       }
       {
         findMode ?

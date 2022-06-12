@@ -70,10 +70,6 @@ button:active {
   color: gray;
 }
 
-.title__content {
-  margin-top: 2rem;
-}
-
 .title__search,
 .searchbar__button {
   display: flex;
@@ -213,8 +209,13 @@ button:active {
 }
 
 .list__image--empty {
-  margin: 0 auto;
+  margin: 50px auto 0;
   width: 400px;
+}
+
+.list__content {
+  margin-top: -50px;
+  color: gray;
 }
 
 @media screen and (max-width: 320px) {

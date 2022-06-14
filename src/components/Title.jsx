@@ -6,7 +6,7 @@ import SearchIcon from '../assets/icon/search.png'
 import Find from './Find';
 
 const Title = () => {
-  const { todos, farsi, dispatch } = useContext(ToDoContext)
+  const { farsi, dispatch } = useContext(ToDoContext)
   const [findMode, setFindMode] = useState(false)
 
   const changeSearch = () => setFindMode(!findMode)

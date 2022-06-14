@@ -7,10 +7,14 @@ const Find = ({ isSerach }) => {
   const [result, setResult] = useState([])
 
   const searchHandler = event => {
-    let value = event.target.value.trim()
-    let filteredValue = todos.filter(todo => todo.content.toLowerCase().startsWith(value.toLowerCase()))
-
+    let value = event.target.value.trim().toLowerCase()
+    let filteredValue = todos.filter(todo => todo.content.toLowerCase().includes(value))
     setResult(value.length ? filteredValue : [])
+  }
+
+  const deleteItemFromResult = id => {
+    let filteredResult = result.filter(item => item.id !== id)
+    setResult(filteredResult)
   }
 
   return (
@@ -24,7 +28,13 @@ const Find = ({ isSerach }) => {
       </div>
       <div className='result'>
         {result.length ?
-          result.map(todo => <WithResult todo={todo} key={todo.id} priority={todo.priority} />)
+          result.map(todo => <WithResult
+            todo={todo}
+            key={todo.id}
+            priority={todo.priority}
+            deleteItem={deleteItemFromResult}
+          />
+          )
           :
           <p>{farsi ? 'موردی وجود ندارد' : 'There is not any thing'}</p>
         }

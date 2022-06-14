@@ -84,6 +84,12 @@ button:active {
   height: 70%;
 }
 
+@media screen and (max-width: 768px) {
+  .title__header {
+    display: none;
+  }
+}
+
 /* Find */
 .find {
   top: 0;
@@ -91,6 +97,7 @@ button:active {
   right: 0;
   bottom: 0;
   z-index: 200;
+  overflow: auto;
   position: fixed;
   background-color: #e9ecef;
 }

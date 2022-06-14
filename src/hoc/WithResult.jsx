@@ -12,9 +12,14 @@ const WithResult = props => {
   const { dispatch, farsi } = useContext(ToDoContext)
 
   const priority = {
-    low : 'card-panel result__item green',
+    low: 'card-panel result__item green',
     medium: 'card-panel result__item orange',
     high: 'card-panel result__item red'
+  }
+
+  const deleteTodo = id => {
+    dispatch({ type: 'REMOVE_TODO', id })
+    props.deleteItem(id)
   }
 
   return (
@@ -22,11 +27,11 @@ const WithResult = props => {
       <ToDo todo={props.todo} />
       <Tooltip content={farsi ? 'حذف' : 'delete'}>
         <ImageButton
-          clicked={() => dispatch({ type: 'REMOVE_TODO', id: props.todo.id })}
+          clicked={() => deleteTodo(props.todo.id)}
           url={remove}
           alt='delete' />
       </Tooltip>
-      <Tooltip content={farsi ? 'انجام شد' : 'done'}>
+      <Tooltip content={farsi ? 'انجام' : 'done'}>
         <ImageButton
           clicked={() => dispatch({ type: 'DONE_TODO', id: props.todo.id })}
           url={props.todo.done ? checked : unchecked}

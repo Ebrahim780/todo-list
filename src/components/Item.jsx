@@ -21,7 +21,7 @@ const Item = ({ priority }) => {
             url={remove}
             alt='delete' />
         </Tooltip>
-        <Tooltip content={farsi ? 'انجام شد' : 'done'}>
+        <Tooltip content={farsi ? 'انجام' : 'done'}>
           <ImageButton
             clicked={() => dispatch({ type: 'DONE_TODO', id: todo.id })}
             url={todo.done ? checked : unchecked}

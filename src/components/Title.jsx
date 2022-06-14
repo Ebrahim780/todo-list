@@ -10,6 +10,7 @@ const Title = () => {
   const [findMode, setFindMode] = useState(false)
 
   const changeSearch = () => setFindMode(!findMode)
+  findMode ? document.body.style = 'overflow: hidden' : document.body.style = 'overflow: auto'
 
   return (
     <div className='title'>

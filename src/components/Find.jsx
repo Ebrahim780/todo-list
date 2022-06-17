@@ -4,12 +4,12 @@ import WithResult from '../hoc/WithResult';
 
 const Find = ({ isSerach }) => {
   const { farsi, todos } = useContext(ToDoContext)
-  const [result, setResult] = useState([])
+  const [result, setResult] = useState(todos)
 
   const searchHandler = event => {
     let value = event.target.value.trim().toLowerCase()
     let filteredValue = todos.filter(todo => todo.content.toLowerCase().includes(value))
-    setResult(value.length ? filteredValue : [])
+    setResult(filteredValue)
   }
 
   const deleteItemFromResult = id => {

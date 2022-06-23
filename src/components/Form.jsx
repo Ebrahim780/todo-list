@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import { ToDoContext } from '../contexts/ToDoProvider';
 import 'react-toastify/dist/ReactToastify.css';
@@ -6,7 +6,7 @@ import 'react-toastify/dist/ReactToastify.css';
 const Form = () => {
   const [currentToDo, setCurrentToDo] = useState('')
   const [priority, setPrtiority] = useState('')
-  const { todos, farsi, dispatch } = useContext(ToDoContext)
+  const { farsi, dispatch } = useContext(ToDoContext)
 
   const submitHandler = (event) => {
     event.preventDefault()

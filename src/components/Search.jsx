@@ -2,7 +2,7 @@ import React, { useContext, useState } from 'react';
 import { ToDoContext } from '../contexts/ToDoProvider';
 import WithResult from '../hoc/WithResult';
 
-const Find = ({ isSerach }) => {
+const Search = ({ isSerach }) => {
   const { farsi, todos } = useContext(ToDoContext)
   const [result, setResult] = useState(todos)
 
@@ -18,9 +18,9 @@ const Find = ({ isSerach }) => {
   }
 
   return (
-    <div className='find'>
-      <div className='searchbar'>
-        <button className='btn btn-floating searchbar__button' onClick={isSerach}>❌</button>
+    <div className='search'>
+      <div className='search__bar'>
+        <button className='btn btn-floating search__bar__button' onClick={isSerach}>❌</button>
         <input type='text'
           className='searchbar__input'
           onChange={searchHandler}
@@ -43,4 +43,4 @@ const Find = ({ isSerach }) => {
   )
 }
 
-export default Find;
+export default Search;

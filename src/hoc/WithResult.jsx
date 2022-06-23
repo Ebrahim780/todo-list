@@ -12,9 +12,9 @@ const WithResult = props => {
   const { dispatch, farsi } = useContext(ToDoContext)
 
   const priority = {
-    low: 'card-panel result__item green',
-    medium: 'card-panel result__item orange',
-    high: 'card-panel result__item red'
+    low: 'card-panel search__result__item green',
+    medium: 'card-panel search__result__item orange',
+    high: 'card-panel search__result__item red'
   }
 
   const deleteTodo = id => {

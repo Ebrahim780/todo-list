@@ -3,7 +3,7 @@ import { ToDoContext } from '../contexts/ToDoProvider';
 import EN from '../assets/icon/en.png';
 import FA from '../assets/icon/fa.png';
 import SearchIcon from '../assets/icon/search.png'
-import Find from './Find';
+import Search from './Search';
 
 const Title = () => {
   const { farsi, dispatch } = useContext(ToDoContext)
@@ -24,10 +24,10 @@ const Title = () => {
       }
       {
         findMode ?
-          <Find isSerach={changeSearch} />
+          <Search isSerach={changeSearch} />
           :
           <button className='btn btn-floating title__search' onClick={changeSearch}>
-            <img src={SearchIcon} alt='Find Todo' className='title__search__icon' />
+            <img src={SearchIcon} alt='Search Todo' className='title__search__icon' />
           </button>
       }
     </div>

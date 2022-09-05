@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 const ImageButton = props => {
   return <img
@@ -9,4 +9,4 @@ const ImageButton = props => {
   />
 }
 
-export default ImageButton;
+export default ImageButton

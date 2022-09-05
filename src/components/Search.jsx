@@ -1,6 +1,6 @@
-import React, { useContext, useState } from 'react';
-import { ToDoContext } from '../contexts/ToDoProvider';
-import WithResult from '../hoc/WithResult';
+import React, { useContext, useState } from 'react'
+import { ToDoContext } from '../contexts/ToDoProvider'
+import WithResult from '../hoc/WithResult'
 
 const Search = ({ isSerach }) => {
   const { farsi, todos } = useContext(ToDoContext)
@@ -43,4 +43,4 @@ const Search = ({ isSerach }) => {
   )
 }
 
-export default Search;
+export default Search

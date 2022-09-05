@@ -1,5 +1,5 @@
-import React, { useContext } from 'react';
-import { ToDoContext } from '../contexts/ToDoProvider';
+import React, { useContext } from 'react'
+import { ToDoContext } from '../contexts/ToDoProvider'
 
 const ToDo = (props) => {
   const { dispatch } = useContext(ToDoContext)
@@ -14,4 +14,4 @@ const ToDo = (props) => {
   )
 }
 
-export default ToDo;
+export default ToDo

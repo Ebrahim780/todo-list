@@ -1,12 +1,12 @@
-import React, { useContext } from 'react';
-import { ToDoContext } from '../contexts/ToDoProvider';
-import ToDo from './ToDo';
-import Tooltip from './ToolTip';
-import ImageButton from './ImageButton';
-import pin from '../assets/icon/pin.png';
-import remove from '../assets/icon/remove.png';
-import checked from '../assets/icon/checked.png';
-import unchecked from '../assets/icon/unchecked.png';
+import React, { useContext } from 'react'
+import { ToDoContext } from '../contexts/ToDoProvider'
+import ToDo from './ToDo'
+import Tooltip from './ToolTip'
+import ImageButton from './ImageButton'
+import pin from '../assets/icon/pin.png'
+import remove from '../assets/icon/remove.png'
+import checked from '../assets/icon/checked.png'
+import unchecked from '../assets/icon/unchecked.png'
 
 const Item = ({ priority }) => {
   const { todos, farsi, dispatch } = useContext(ToDoContext)
@@ -37,4 +37,4 @@ const Item = ({ priority }) => {
     )]
 }
 
-export default Item;
+export default Item

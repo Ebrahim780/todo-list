@@ -1,5 +1,5 @@
-import React from 'react';
-import logo from '../assets/icon/logo.png';
+import React from 'react'
+import logo from '../assets/icon/logo.png'
 
 const Loading = () => {
   return (
@@ -20,4 +20,4 @@ const Loading = () => {
   )
 }
 
-export default Loading;
+export default Loading

@@ -1,7 +1,7 @@
-import React, { useContext } from 'react';
-import { ToDoContext } from '../contexts/ToDoProvider';
-import unpin from '../assets/icon/unpin.png';
-import ToolTip from './ToolTip';
+import React, { useContext } from 'react'
+import { ToDoContext } from '../contexts/ToDoProvider'
+import unpin from '../assets/icon/unpin.png'
+import ToolTip from './ToolTip'
 
 const Pinned = () => {
   const { pinned, farsi, dispatch } = useContext(ToDoContext)
@@ -24,4 +24,4 @@ const Pinned = () => {
   else return null
 }
 
-export default Pinned;
+export default Pinned

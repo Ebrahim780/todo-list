@@ -1,5 +1,5 @@
-import React, { createContext, useEffect, useReducer } from 'react';
-import { todoReducer } from '../reducers';
+import React, { createContext, useEffect, useReducer } from 'react'
+import { todoReducer } from '../reducers'
 
 export const ToDoContext = createContext()
 
@@ -26,4 +26,4 @@ const ToDoProvider = (props) => {
   )
 }
 
-export default ToDoProvider;
+export default ToDoProvider

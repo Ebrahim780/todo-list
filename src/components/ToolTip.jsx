@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import '../styles/tooltip.css';
+import React, { useState } from 'react'
+import '../styles/tooltip.css'
 
 const Tooltip = (props) => {
   let timeout
@@ -28,4 +28,4 @@ const Tooltip = (props) => {
   )
 }
 
-export default Tooltip;
+export default Tooltip

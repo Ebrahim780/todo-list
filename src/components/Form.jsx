@@ -1,7 +1,7 @@
-import React, { useContext, useState } from 'react';
-import { ToastContainer, toast } from 'react-toastify';
-import { ToDoContext } from '../contexts/ToDoProvider';
-import 'react-toastify/dist/ReactToastify.css';
+import React, { useContext, useState } from 'react'
+import { ToastContainer, toast } from 'react-toastify'
+import { ToDoContext } from '../contexts/ToDoProvider'
+import 'react-toastify/dist/ReactToastify.css'
 
 const Form = () => {
   const [currentToDo, setCurrentToDo] = useState('')
@@ -46,4 +46,4 @@ const Form = () => {
   )
 }
 
-export default Form;
+export default Form

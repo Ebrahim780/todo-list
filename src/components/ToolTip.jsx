@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import '../styles/tooltip.css'
+import 'styles/tooltip.css'
 
 const Tooltip = (props) => {
   let timeout

@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
-import { ToDoContext } from '../contexts/ToDoProvider'
-import unpin from '../assets/icon/unpin.png'
+import { ToDoContext } from 'contexts/ToDoProvider'
+import unpin from 'assets/icon/unpin.png'
 import ToolTip from './ToolTip'
 
 const Pinned = () => {

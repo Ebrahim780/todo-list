@@ -1,12 +1,12 @@
 import React, { useContext } from 'react'
-import ImageButton from '../components/ImageButton'
-import ToDo from '../components/ToDo'
-import { ToDoContext } from '../contexts/ToDoProvider'
-import pin from '../assets/icon/pin.png'
-import remove from '../assets/icon/remove.png'
-import checked from '../assets/icon/checked.png'
-import unchecked from '../assets/icon/unchecked.png'
-import Tooltip from '../components/ToolTip'
+import ImageButton from 'components/ImageButton'
+import ToDo from 'components/ToDo'
+import { ToDoContext } from 'contexts/ToDoProvider'
+import pin from 'assets/icon/pin.png'
+import remove from 'assets/icon/remove.png'
+import checked from 'assets/icon/checked.png'
+import unchecked from 'assets/icon/unchecked.png'
+import Tooltip from 'components/ToolTip'
 
 const WithResult = props => {
   const { dispatch, farsi } = useContext(ToDoContext)

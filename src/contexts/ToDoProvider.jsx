@@ -1,16 +1,18 @@
 import React, { createContext, useEffect, useReducer } from 'react'
-import { todoReducer } from '../reducers'
+import { todoReducer } from 'reducers'
+
+const initialState = {
+  todos: [],
+  pinned: {},
+  farsi: true
+}
 
 export const ToDoContext = createContext()
 
 const ToDoProvider = (props) => {
-  const [state, dispatch] = useReducer(todoReducer, {
-    todos: [],
-    pinned: {},
-    farsi: true
-  }, () => {
+  const [state, dispatch] = useReducer(todoReducer, initialState, () => {
     const data = localStorage.getItem('state')
-    return data ? JSON.parse(data) : { todos: [], pinned: {}, farsi: true }
+    return data ? JSON.parse(data) : initialState
   })
 
   useEffect(() => {

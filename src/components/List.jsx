@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
-import { ToDoContext } from '../contexts/ToDoProvider'
-import empty from '../assets/image/empty.png'
+import { ToDoContext } from 'contexts/ToDoProvider'
+import empty from 'assets/image/empty.png'
 import Item from './Item'
 
 const List = () => {

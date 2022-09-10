@@ -1,8 +1,8 @@
 import React, { useContext, useState } from 'react'
-import { ToDoContext } from '../contexts/ToDoProvider'
-import EN from '../assets/icon/en.png'
-import FA from '../assets/icon/fa.png'
-import SearchIcon from '../assets/icon/search.png'
+import { ToDoContext } from 'contexts/ToDoProvider'
+import EN from 'assets/icon/en.png'
+import FA from 'assets/icon/fa.png'
+import SearchIcon from 'assets/icon/search.png'
 import Search from './Search'
 
 const Title = () => {

@@ -1,0 +1,22 @@
+{
+  "short_name": "todo-list",
+  "name": "A todo list",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "favicon.png",
+      "type": "image/png",
+      "sizes": "480x480"
+    }
+    
+  ],
+  "start_url": ".",
+  "orientation": "portrait-primary",
+  "display": "standalone",
+  "theme_color": "#e9ecef",
+  "background_color": "#e9ecef"
+}

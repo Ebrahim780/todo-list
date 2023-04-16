@@ -1,12 +1,15 @@
 import React from 'react'
-import reactDom from 'react-dom'
-import App from './containers/App'
+import ReactDOM from 'react-dom/client'
+import App from './App'
 import './styles/materialize.css'
 import './styles/index.css'
+import * as serviceWorkerRegistration from './serviceWorkerRegistration'
 
-reactDom.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+const root = ReactDOM.createRoot(document.getElementById('root'))
+root.render(
+	<React.StrictMode>
+		<App />
+	</React.StrictMode>
 )
+
+serviceWorkerRegistration.register()

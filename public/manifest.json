@@ -1,6 +1,6 @@
 {
-  "short_name": "todo-list",
-  "name": "A todo list",
+  "short_name": "ToDo",
+  "name": "My ToDo",
   "icons": [
     {
       "src": "favicon.ico",
@@ -8,11 +8,16 @@
       "type": "image/x-icon"
     },
     {
-      "src": "favicon.png",
+      "src": "logo192.png",
       "type": "image/png",
-      "sizes": "480x480"
+      "sizes": "192x192"
+    },
+    {
+      "src": "logo512.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any maskable"
     }
-    
   ],
   "start_url": ".",
   "orientation": "portrait-primary",

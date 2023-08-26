@@ -1,10 +1,10 @@
-import React, { useState } from 'react'
+import ToDoProvider from 'contexts/ToDoProvider'
+import Loading from 'components/Loading'
+import Pinned from 'components/Pinned'
 import Header from 'components/Header'
 import Form from 'components/Form'
 import List from 'components/List'
-import Loading from 'components/Loading'
-import ToDoProvider from 'contexts/ToDoProvider'
-import Pinned from 'components/Pinned'
+import { useState } from 'react'
 
 const App = () => {
 	const [loading, setLoading] = useState(true)
@@ -13,6 +13,7 @@ const App = () => {
 	setTimeout(() => {
 		setLoading(false)
 	}, random)
+
 	return loading ? (
 		<Loading />
 	) : (

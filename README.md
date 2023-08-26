@@ -1,6 +1,6 @@
 # TodoList
 
-build version of a todo list created with react
+a todo list created with react
 
 ## Available Scripts
 

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import 'styles/tooltip.css'
 
 const Tooltip = ({ children, delay, direction, content }) => {

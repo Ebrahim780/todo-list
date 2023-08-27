@@ -1,6 +1,5 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
-/manifest
 
 # dependencies
 /node_modules
@@ -9,6 +8,10 @@
 
 # testing
 /coverage
+
+# development
+/manifest
+/dev-dist
 
 # production
 /build

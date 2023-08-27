@@ -1,9 +1,8 @@
-import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './App'
 import './styles/materialize.css'
 import './styles/index.css'
-import * as serviceWorkerRegistration from './serviceWorkerRegistration'
+import React from 'react'
+import App from './App'
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
@@ -11,5 +10,3 @@ root.render(
 		<App />
 	</React.StrictMode>
 )
-
-serviceWorkerRegistration.register()

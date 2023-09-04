@@ -1,10 +1,10 @@
-import { ToDoContext } from 'contexts/ToDoProvider'
+import { useStateContext } from 'contexts/ToDoProvider'
 import unpin from 'assets/icon/unpin.png'
-import { useContext } from 'react'
+import translate from 'translate/list'
 import ToolTip from './ToolTip'
 
 const Pinned = () => {
-	const { pinned, farsi, dispatch } = useContext(ToDoContext)
+	const { pinned, lang, dispatch } = useStateContext()
 
 	return (
 		pinned.content && (
@@ -15,7 +15,7 @@ const Pinned = () => {
 							{pinned.content}
 						</span>
 
-						<ToolTip content={farsi ? 'برداشتن' : 'Unpin'}>
+						<ToolTip content={translate[lang].item.unpin}>
 							<img
 								src={unpin}
 								className='pinned__button'

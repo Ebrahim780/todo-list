@@ -13,6 +13,7 @@ export default defineConfig({
 			styles: path.resolve(__dirname, './src/styles'),
 			contexts: path.resolve(__dirname, './src/contexts'),
 			reducers: path.resolve(__dirname, './src/reducers'),
+			translate: path.resolve(__dirname, './src/translate'),
 			components: path.resolve(__dirname, './src/components'),
 		},
 	},

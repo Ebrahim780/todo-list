@@ -1,10 +1,10 @@
-import { createContext, useEffect, useReducer } from 'react'
+import { createContext, useContext, useEffect, useReducer } from 'react'
 import { todoReducer } from 'reducers'
 
 const initialState = {
 	todos: [],
 	pinned: {},
-	farsi: true,
+	lang: 'fa',
 }
 
 export const ToDoContext = createContext()
@@ -31,3 +31,7 @@ const ToDoProvider = props => {
 }
 
 export default ToDoProvider
+
+export function useStateContext() {
+	return useContext(ToDoContext)
+}

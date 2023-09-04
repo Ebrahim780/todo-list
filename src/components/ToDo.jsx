@@ -1,8 +1,7 @@
-import { ToDoContext } from 'contexts/ToDoProvider'
-import { useContext } from 'react'
+import { useStateContext } from 'contexts/ToDoProvider'
 
 const ToDo = ({ todo }) => {
-	const { dispatch } = useContext(ToDoContext)
+	const { dispatch } = useStateContext()
 	const { content, id, done } = todo
 
 	return (

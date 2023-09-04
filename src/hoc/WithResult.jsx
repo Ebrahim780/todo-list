@@ -1,15 +1,15 @@
-import { ToDoContext } from 'contexts/ToDoProvider'
+import { useStateContext } from 'contexts/ToDoProvider'
 import unchecked from 'assets/icon/unchecked.png'
 import ImageButton from 'components/ImageButton'
 import checked from 'assets/icon/checked.png'
 import remove from 'assets/icon/remove.png'
 import Tooltip from 'components/ToolTip'
+import translate from 'translate/list'
 import pin from 'assets/icon/pin.png'
 import ToDo from 'components/ToDo'
-import { useContext } from 'react'
 
 const WithResult = ({ todo, priority, deleteItem }) => {
-	const { dispatch, farsi } = useContext(ToDoContext)
+	const { dispatch, lang } = useStateContext()
 
 	const prioritiesColor = {
 		low: 'green',
@@ -27,7 +27,7 @@ const WithResult = ({ todo, priority, deleteItem }) => {
 			className={`card-panel search__result__item ${prioritiesColor[priority]}`}>
 			<ToDo todo={todo} />
 
-			<Tooltip content={farsi ? 'حذف' : 'delete'}>
+			<Tooltip content={translate[lang].item.delete}>
 				<ImageButton
 					clicked={() => deleteTodo(todo.id)}
 					url={remove}
@@ -35,7 +35,7 @@ const WithResult = ({ todo, priority, deleteItem }) => {
 				/>
 			</Tooltip>
 
-			<Tooltip content={farsi ? 'انجام' : 'done'}>
+			<Tooltip content={translate[lang].item.done}>
 				<ImageButton
 					clicked={() => dispatch({ type: 'DONE_TODO', id: todo.id })}
 					url={todo.done ? checked : unchecked}
@@ -43,7 +43,7 @@ const WithResult = ({ todo, priority, deleteItem }) => {
 				/>
 			</Tooltip>
 
-			<Tooltip content={farsi ? 'چسباندن' : 'pin'}>
+			<Tooltip content={translate[lang].item.pin}>
 				<ImageButton
 					clicked={() => dispatch({ type: 'PIN_TODO', id: todo.id })}
 					url={pin}

@@ -54,10 +54,16 @@ export const todoReducer = (state, action) => {
 				pinned: {},
 			}
 
-		case 'SET_LANG':
+		case 'SET_LANG_FA':
 			return {
 				...state,
-				farsi: !state.farsi,
+				lang: 'fa',
+			}
+
+		case 'SET_LANG_EN':
+			return {
+				...state,
+				lang: 'en',
 			}
 
 		default:

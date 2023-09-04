@@ -1,22 +1,19 @@
+import { useStateContext } from 'contexts/ToDoProvider'
 import { ToastContainer, toast } from 'react-toastify'
-import { ToDoContext } from 'contexts/ToDoProvider'
 import 'react-toastify/dist/ReactToastify.css'
-import { useContext, useState } from 'react'
+import translate from 'translate/form'
+import { useState } from 'react'
 
 const Form = () => {
 	const [currentToDo, setCurrentToDo] = useState('')
 	const [priority, setPrtiority] = useState('')
-	const { farsi, dispatch } = useContext(ToDoContext)
+	const { lang, dispatch } = useStateContext()
 
 	const submitHandler = event => {
 		event.preventDefault()
 
-		if (priority === '')
-			toast.warn(
-				farsi ? 'لطفا سطح اولویت را تعیین کنید' : 'Please set the Priority'
-			)
-		else if (currentToDo.trim() === '')
-			toast.error(farsi ? 'لطفا چیزی بنویسید' : 'Please write something')
+		if (priority === '') toast.warn(translate[lang].warning)
+		else if (currentToDo.trim() === '') toast.error(translate[lang].error)
 		else
 			dispatch({
 				type: 'ADD_TODO',
@@ -39,9 +36,7 @@ const Form = () => {
 					tabIndex={1}
 					value={currentToDo}
 					onChange={event => setCurrentToDo(event.target.value)}
-					placeholder={
-						farsi ? 'چه کاری می خوای انجام بدی؟' : 'What do you want to do?'
-					}
+					placeholder={translate[lang].input}
 				/>
 
 				<button
@@ -61,17 +56,17 @@ const Form = () => {
 					<option
 						value=''
 						disabled>
-						{farsi ? 'سطح اولویت را تعیین کن' : 'Set the priority level'}
+						{translate[lang].select}
 					</option>
-					<option value='low'>{farsi ? 'کم' : 'Low'}</option>
-					<option value='medium'>{farsi ? 'متوسط' : 'Medium'}</option>
-					<option value='high'>{farsi ? 'زیاد' : 'High'}</option>
+					<option value='low'>{translate[lang].options.low}</option>
+					<option value='medium'>{translate[lang].options.medium}</option>
+					<option value='high'>{translate[lang].options.high}</option>
 				</select>
 			</div>
 
 			<ToastContainer
-				position={farsi ? 'top-left' : 'top-right'}
-				rtl={farsi ? true : false}
+				position={lang === 'fa' ? 'top-left' : 'top-right'}
+				rtl={lang === 'fa' ? true : false}
 			/>
 		</form>
 	)

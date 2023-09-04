@@ -1,12 +1,13 @@
-import { ToDoContext } from 'contexts/ToDoProvider'
+import { useStateContext } from 'contexts/ToDoProvider'
 import SearchIcon from 'assets/icon/search.png'
-import { useContext, useState } from 'react'
+import translate from 'translate/header'
 import EN from 'assets/icon/en.png'
 import FA from 'assets/icon/fa.png'
+import { useState } from 'react'
 import Search from './Search'
 
 const Header = () => {
-	const { farsi, dispatch } = useContext(ToDoContext)
+	const { lang, dispatch } = useStateContext()
 	const [searching, setSearching] = useState(false)
 
 	searching
@@ -21,18 +22,18 @@ const Header = () => {
 		<div className='header'>
 			<button
 				className='header__button btn-floating'
-				onClick={() => dispatch({ type: 'SET_LANG' })}>
+				onClick={() =>
+					dispatch({ type: `SET_LANG_${lang === 'fa' ? 'EN' : 'FA'}` })
+				}>
 				<img
 					className='header__icon--lang'
-					src={farsi ? EN : FA}
+					src={lang === 'fa' ? FA : EN}
 					alt='language'
 				/>
 			</button>
-			{farsi ? (
-				<h4 className='header__header'>فهرست کارهای من</h4>
-			) : (
-				<h4 className='header__header'>My To Do List</h4>
-			)}
+
+			<h4 className='header__header'>{translate[lang].headline}</h4>
+
 			{searching ? (
 				<Search isSerach={() => setSearching(false)} />
 			) : (

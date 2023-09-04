@@ -1,36 +1,30 @@
-import { ToDoContext } from 'contexts/ToDoProvider'
+import { useStateContext } from 'contexts/ToDoProvider'
 import empty from 'assets/image/empty.png'
-import { useContext } from 'react'
+import translate from 'translate/list'
 import Item from './Item'
 
 const List = () => {
-	const { todos, farsi } = useContext(ToDoContext)
+	const { todos, lang } = useStateContext()
 
 	return todos.length ? (
 		<div className='row list'>
 			<div className='col s12 m6 l4'>
 				<div className='card-panel green'>
-					<h5 className='list__header'>
-						{farsi ? 'مهم نیست انجام بشه' : 'No Matter to done'}
-					</h5>
+					<h5 className='list__header'>{translate[lang].lowTitle}</h5>
 					<Item priority='low' />
 				</div>
 			</div>
 
 			<div className='col s12 m6 l4'>
 				<div className='card-panel orange'>
-					<h5 className='list__header'>
-						{farsi ? 'بهتره انجام بشه' : 'Better to done'}
-					</h5>
+					<h5 className='list__header'>{translate[lang].mediumTitle}</h5>
 					<Item priority='medium' />
 				</div>
 			</div>
 
 			<div className='col s12 m6 l4'>
 				<div className='card-panel red'>
-					<h5 className='list__header'>
-						{farsi ? 'باید انجام بشه' : 'Have to done'}
-					</h5>
+					<h5 className='list__header'>{translate[lang].highTitle}</h5>
 					<Item priority='high' />
 				</div>
 			</div>
@@ -42,11 +36,7 @@ const List = () => {
 				alt='nothing to do'
 				className='list__image--empty'
 			/>
-			<p className='list__content'>
-				{farsi
-					? `شما کاری برای انجام ندارید :)`
-					: `You don't have any work to do :)`}
-			</p>
+			<p className='list__content'>{translate[lang].empty}</p>
 		</div>
 	)
 }

@@ -1,9 +1,10 @@
-import { ToDoContext } from 'contexts/ToDoProvider'
-import { useContext, useState } from 'react'
+import { useStateContext } from 'contexts/ToDoProvider'
+import translate from 'translate/header'
 import WithResult from 'hoc/WithResult'
+import { useState } from 'react'
 
 const Search = ({ isSerach }) => {
-	const { farsi, todos } = useContext(ToDoContext)
+	const { lang, todos } = useStateContext()
 	const [result, setResult] = useState(todos)
 
 	const searchHandler = event => {
@@ -33,9 +34,7 @@ const Search = ({ isSerach }) => {
 					type='text'
 					className='searchbar__input'
 					onChange={searchHandler}
-					placeholder={
-						farsi ? 'دنبال چه کاری می گردی؟' : 'What Are you Looking for?'
-					}
+					placeholder={translate[lang].searchbar}
 				/>
 			</div>
 
@@ -50,7 +49,7 @@ const Search = ({ isSerach }) => {
 						/>
 					))
 				) : (
-					<p>{farsi ? 'موردی وجود ندارد' : 'There is not any thing'}</p>
+					<p>{translate[lang].empty}</p>
 				)}
 			</div>
 		</div>

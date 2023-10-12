@@ -75,7 +75,7 @@ button:active {
   height: 100%;
 }
 
-.header__header {
+.header__title {
   color: gray;
 }
 
@@ -94,7 +94,7 @@ button:active {
 }
 
 @media screen and (max-width: 768px) {
-  .header__header {
+  .header__title {
     display: none;
   }
 }

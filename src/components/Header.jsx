@@ -32,7 +32,7 @@ const Header = () => {
 				/>
 			</button>
 
-			<h4 className='header__header'>{translate[lang].headline}</h4>
+			<h4 className='header__title'>{translate[lang].headline}</h4>
 
 			{searching ? (
 				<Search isSerach={() => setSearching(false)} />

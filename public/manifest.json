@@ -1,6 +1,6 @@
 {
-  "short_name": "ToDo",
-  "name": "My ToDo",
+  "short_name": "Todo List",
+  "name": "My Todo List",
   "icons": [
     {
       "src": "favicon.ico",

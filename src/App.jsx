@@ -1,9 +1,9 @@
 import ToDoProvider from 'contexts/ToDoProvider'
+import MainList from 'components/MainList'
 import Loading from 'components/Loading'
 import Pinned from 'components/Pinned'
 import Header from 'components/Header'
 import Form from 'components/Form'
-import List from 'components/List'
 import { useState } from 'react'
 
 const App = () => {
@@ -20,7 +20,7 @@ const App = () => {
 		<ToDoProvider>
 			<Header />
 			<Form />
-			<List />
+			<MainList />
 			<Pinned />
 		</ToDoProvider>
 	)

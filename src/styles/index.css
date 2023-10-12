@@ -182,6 +182,7 @@ button:active {
 /* List */
 .list {
   display: flex;
+  justify-content: space-evenly;
   flex-flow: row wrap;
   margin-top: 3rem;
   color: #fff;

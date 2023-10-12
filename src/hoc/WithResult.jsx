@@ -1,17 +1,17 @@
 import { useStateContext } from 'contexts/ToDoProvider'
 import unchecked from 'assets/icon/unchecked.png'
 import ImageButton from 'components/ImageButton'
+import TodoContent from 'components/TodoContent'
 import checked from 'assets/icon/checked.png'
 import remove from 'assets/icon/remove.png'
 import Tooltip from 'components/ToolTip'
 import translate from 'translate/list'
 import pin from 'assets/icon/pin.png'
-import ToDo from 'components/ToDo'
 
 const WithResult = ({ todo, priority, deleteItem }) => {
 	const { dispatch, lang } = useStateContext()
 
-	const prioritiesColor = {
+	const colors = {
 		low: 'green',
 		medium: 'orange',
 		high: 'red',
@@ -23,9 +23,8 @@ const WithResult = ({ todo, priority, deleteItem }) => {
 	}
 
 	return (
-		<div
-			className={`card-panel search__result__item ${prioritiesColor[priority]}`}>
-			<ToDo todo={todo} />
+		<div className={`card-panel search__result__item ${colors[priority]}`}>
+			<TodoContent todo={todo} />
 
 			<Tooltip content={translate[lang].item.delete}>
 				<ImageButton

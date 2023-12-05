@@ -4,10 +4,12 @@ import translate from 'translate/list'
 import ToolTip from './ToolTip'
 
 const Pinned = () => {
-  const { pinned, lang, dispatch } = useStateContext()
+  const { todos, lang, dispatch } = useStateContext()
+
+  const pinned = todos.find(todo => todo.pinned == true)
 
   return (
-    pinned.content && (
+    pinned?.content && (
       <div className='pinned__wrapper'>
         <div className='pinned card-panel blue'>
           <div className='pinned__container'>
@@ -16,7 +18,9 @@ const Pinned = () => {
             </span>
 
             <ToolTip content={translate[lang].item.unpin}>
-              <UnpinIcon onClick={() => dispatch({ type: 'UNPIN_TODO', id: pinned.id })} />
+              <UnpinIcon
+                onClick={() => dispatch({ type: 'UNPIN_TODO', id: pinned.id })}
+              />
             </ToolTip>
           </div>
         </div>

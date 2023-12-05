@@ -152,7 +152,6 @@ button:active,
 }
 
 @media screen and (max-width: 768px) {
-
   .form__input,
   .search__result__item,
   .searchbar__input {
@@ -184,7 +183,7 @@ button:active,
   display: flex;
   align-items: center;
   justify-content: space-around;
-  margin-bottom: 10px;
+  margin-top: 5px;
   background-color: rgba(0, 0, 0, 0.15);
   border-radius: 3px;
   padding: 0 5px;

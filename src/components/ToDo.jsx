@@ -1,9 +1,9 @@
 import { useStateContext } from 'contexts/ToDoProvider'
 import CheckedIcon from './Icons/CheckedIcon'
 import RemoveIcon from './Icons/RemoveIcon'
-import PinIcon from './Icons/PinIcon'
 import TodoContent from './TodoContent'
 import translate from 'translate/list'
+import PinIcon from './Icons/PinIcon'
 import Tooltip from './ToolTip'
 
 const Todo = ({ todo }) => {

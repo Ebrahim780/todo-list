@@ -1,45 +1,36 @@
 import { useStateContext } from 'contexts/ToDoProvider'
-import unchecked from 'assets/icon/unchecked.png'
-import checked from 'assets/icon/checked.png'
-import remove from 'assets/icon/remove.png'
+import CheckedIcon from './Icons/CheckedIcon'
+import RemoveIcon from './Icons/RemoveIcon'
+import PinIcon from './Icons/PinIcon'
 import TodoContent from './TodoContent'
-import ImageButton from './ImageButton'
 import translate from 'translate/list'
-import pin from 'assets/icon/pin.png'
 import Tooltip from './ToolTip'
 
 const Todo = ({ todo }) => {
-	const { lang, dispatch } = useStateContext()
+  const { lang, dispatch } = useStateContext()
 
-	return (
-		<>
-			<TodoContent todo={todo} />
+  return (
+    <>
+      <TodoContent todo={todo} />
 
-			<Tooltip content={translate[lang].item.delete}>
-				<ImageButton
-					clicked={() => dispatch({ type: 'REMOVE_TODO', id: todo.id })}
-					url={remove}
-					alt='delete'
-				/>
-			</Tooltip>
+      <Tooltip content={translate[lang].item.delete}>
+        <RemoveIcon
+          onClick={() => dispatch({ type: 'REMOVE_TODO', id: todo.id })}
+        />
+      </Tooltip>
 
-			<Tooltip content={translate[lang].item.done}>
-				<ImageButton
-					clicked={() => dispatch({ type: 'DONE_TODO', id: todo.id })}
-					url={todo.done ? checked : unchecked}
-					alt='done'
-				/>
-			</Tooltip>
+      <Tooltip content={translate[lang].item.done}>
+        <CheckedIcon
+          checked={todo.done}
+          onClick={() => dispatch({ type: 'DONE_TODO', id: todo.id })}
+        />
+      </Tooltip>
 
-			<Tooltip content={translate[lang].item.pin}>
-				<ImageButton
-					clicked={() => dispatch({ type: 'PIN_TODO', id: todo.id })}
-					url={pin}
-					alt='pin'
-				/>
-			</Tooltip>
-		</>
-	)
+      <Tooltip content={translate[lang].item.pin}>
+        <PinIcon onClick={() => dispatch({ type: 'PIN_TODO', id: todo.id })} />
+      </Tooltip>
+    </>
+  )
 }
 
 export default Todo
